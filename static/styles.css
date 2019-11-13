@@ -1,0 +1,163 @@
+@font-face {
+	font-family:"PressStart2P";
+	src:url("PressStart2P.ttf");
+}
+
+html {
+	font-family:"PressStart2P", sans-serif;
+	touch-action:none;
+	background-color:#2c3e50;
+}
+
+
+
+button {
+	outline:none;
+	border:0;
+	font-family:"PressStart2P", sans-serif;
+	font-size:4vmin;
+	background-color:#cdd;
+	color:#2c3e50;
+	padding:2vmin 3vmin 2vmin 3vmin;
+	transition-duration:0.2s;
+}
+button:active {
+	background-color:#2c3e50;
+	color:#cdd;
+}
+button.secondary {
+	background-color:#2c3e50;
+	color:#cdd;
+}
+button.secondary:active {
+	background-color:#cdd;
+	color:#2c3e50;
+}
+
+h1 {
+	font-size:7vmin;
+	margin-top:0;
+}
+
+
+
+#grid {
+	position:fixed;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	width:100vmin;
+	height:100vmin;
+	background-color:#cdd;
+	display:grid;
+	grid-template-rows:repeat(10, 1fr);
+	grid-template-columns:repeat(10, 1fr);
+	align-items:center;
+	justify-items:center;
+}
+#grid > div {
+	z-index:10;
+	width:90%;
+	height:90%;
+}
+.snake {
+	background-color:#0c4;
+}
+.snake.head {
+	background-color:#27ae60;
+}
+.food {
+	background-color:#E43;
+	transform:rotate(45deg) scale(0.7);
+}
+
+
+
+#scoreLabel {
+	position:fixed;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	color:#788;
+	font-size:40vmin;
+	margin:0;
+}
+
+
+
+.popup {
+	display:none;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100vw;
+	height:100vh;
+	text-align:center;
+	color:#cdd;
+	background-color:#2c3e50;
+}
+.popup > .content {
+	position:fixed;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	font-size:4vmin;
+}
+
+
+
+#startScreen {
+	display:block;
+}
+#startScreen h1 {
+	font-size:15vmin;
+}
+#startScreen #buttonGrid {
+	display:inline-grid;
+	grid-template-rows:1fr;
+	grid-template-columns:repeat(3, 1fr);
+	justify-content:center;
+}
+#startScreen #buttonGrid > button {
+	margin:2vmin;
+	line-height:0;
+	font-size:5vmin;
+}
+#startScreen #buttonGrid > #startButton {
+	font-size:9vmin;
+	margin:0;
+}
+#startScreen #gameOverScoreLabel {
+	display:none;
+}
+
+
+
+#settingsScreen input, #enterLeaderboardScreen input {
+	width:20vmin;
+	outline:none;
+	font-family:"PressStart2P", sans-serif;
+	font-size:4vmin;
+	background:transparent;
+	color:inherit;
+	border:0;
+}
+
+
+
+#leaderboardScreen table {
+	display:inline-block;
+}
+#leaderboardScreen table td {
+	padding:1vh 2vw 1vh 2vw;
+	max-width:60vw;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+#enterLeaderboardScreen input {
+	width:50vmin;
+}
+#statusIndicator {
+	display:none;
+	color:#d66;
+}

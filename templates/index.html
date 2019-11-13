@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>Snek</title>
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles.css')}}"/>
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='fontello/css/fontello.css')}}"/>
+		<script src="{{url_for('static', filename='jquery-3.3.1.min.js')}}"></script>
+		<script src="{{url_for('static', filename='script.js')}}"></script>
+	</head>
+
+	<body>
+		<div id="grid">
+			<p id="scoreLabel">0</p>
+		</div>
+
+
+
+		<div id="startScreen" class="popup">
+			<div class="content">
+				<h1>Snek</h1>
+
+				<p id="gameOverScoreLabel">Punktzahl: 123</p><br/>
+
+				<div id="buttonGrid">
+					<button class="icon-cog secondary" onclick="$('#settingsScreen').fadeIn(200);"></button>
+
+					<button id="startButton" class="icon-play" onclick="starter.prepare();"></button>
+
+					<button class="icon-chart-bar secondary" onclick="$('#leaderboardScreen').fadeIn(200);refreshLeaderboardScreen();"></button>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div id="settingsScreen" class="popup">
+			<div class="content">
+				<h1>Einstellungen</h1>
+
+				<label for="gridSizeInput">Feldgröße: </label>
+				<input id="gridSizeInput" name="gridSizeInput" type="number" value="10" min="2"/><br/>
+				<label for="speedInput">Geschw.: </label>
+				<input id="speedInput" name="speedInput" type="number" value="150"/><br/><br/>
+
+				<button onclick="$('#settingsScreen').fadeOut(200);" class="secondary">Schließen</button>
+				<button onclick="applySettings();$('#settingsScreen').fadeOut(200);">Speichern</button>
+			</div>
+		</div>
+
+
+
+		<div id="leaderboardScreen" class="popup">
+			<div class="content">
+				<h1>Bestenliste</h1>
+
+				<table></table>
+				<br/><br/>
+
+				<button class="secondary" onclick="$('#leaderboardScreen').fadeOut(200);">Schließen</button>
+			</div>
+		</div>
+
+
+
+		<div id="enterLeaderboardScreen" class="popup">
+			<div class="content">
+				<h1>Gratulation!</h1>
+				<p>Du gehörst zu den 10 Besten!<br/><br/>Gib deinen Namen ein, um in die Bestenliste eingetragen zu werden.</p>
+
+				<label for="name">Name: </label>
+				<input id="nameInput" name="name" pattern="[A-Za-z0-9]+" maxlength="30" autocomplete="off" required/><br/>
+
+				<p id="statusIndicator"><br/></p>
+
+				<p>
+					<button class="secondary" onclick="closeLeaderboardScreen();">Nein</button>
+					<button onclick="enterLeaderboard();">Eintragen</button>
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

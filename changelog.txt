@@ -1,0 +1,21 @@
+29.12.2018:
+Sensibilität der Touchsteuerung wurde verringert
+
+18.12.2018:
+Verbesserte Touchsteuerung
+
+16.12.2018:
+Bestenlistetabelle wird mit Javascript erstellt
+ajax-Anfrage zum Eintragen ins Leaderboard statt form, damit Seite nicht neu geladen werden muss
+
+15.12.2018:
+Bestenliste mit Flask
+Neues Layout für Startseite
+
+05.10.2018:
+V1.1
+Focus-Bug in den Einstellungen behoben
+Unterscheidung von Primary- und Secondarybuttons
+
+30.07.2018:
+V1
