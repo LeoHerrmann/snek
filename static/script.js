@@ -270,17 +270,6 @@ function display() {
 
 
 
-/*function applySettings() {
-	gridSize = parseInt($("#gridSizeInput").val());
-	speed = parseInt($("#speedInput").val());
-
-	if (gridSize < 2) {
-		gridSize = 2;
-	}
-}*/
-
-
-
 function enterLeaderboard() {
 	var data = {
 		name: $("#nameInput").val(),
