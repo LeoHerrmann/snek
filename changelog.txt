@@ -4,6 +4,7 @@ Layout and Design overhaul
 Translation to English
 Removed settings page
 Web app manifest
+jQuery updated
 
 
 
