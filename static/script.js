@@ -123,7 +123,7 @@ var starter = {
 				display();
 			}
 			else {
-				$("#gameOverScoreLabel").text("Punkzahl: " + score);
+				$("#gameOverScoreLabel").text("Score: " + score);
 				$("#startScreen").fadeIn(200);
 				$("#startScreen h1").text("Game Over");
 				$("#startScreen #gameOverScoreLabel").css("display", "block");
@@ -270,14 +270,14 @@ function display() {
 
 
 
-function applySettings() {
+/*function applySettings() {
 	gridSize = parseInt($("#gridSizeInput").val());
 	speed = parseInt($("#speedInput").val());
 
 	if (gridSize < 2) {
 		gridSize = 2;
 	}
-}
+}*/
 
 
 
@@ -308,17 +308,17 @@ function enterLeaderboard() {
 		var allowedCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
 		if (name.length > 30 || name.length == 0) {
-			valid = "Der Name muss zwischen 1 und 30 Zeichen beinhalten.";
+			valid = "The name must be between 1 and 30 characters long.";
 		}
 
 		for (letter in name) {
 			if (allowedCharacters.indexOf(name[letter]) == -1) {
-				valid = "Der Name darf keine Sonderzeichen enthalten.";
+				valid = "The name must not contain any special characters.";
 			}
 		}
 
 		if (parseInt(score) != score) {
-			valid = "Ungültige Punktzahl";
+			valid = "Invalid score";
 		}
 
 		return valid

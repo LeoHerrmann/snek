@@ -1,21 +1,28 @@
+13.11.2019:
+V2
+Layout and Design overhaul
+Translation to English
+Removed settings page
+
+
+
 29.12.2018:
-Sensibilität der Touchsteuerung wurde verringert
+Decreased sensibility of touch controls
 
 18.12.2018:
-Verbesserte Touchsteuerung
+Improved touch controls
 
 16.12.2018:
-Bestenlistetabelle wird mit Javascript erstellt
-ajax-Anfrage zum Eintragen ins Leaderboard statt form, damit Seite nicht neu geladen werden muss
+Leaderboard table is created using javascript
+Ajax-Request to enter leaderboard instead of form -> Page no longer needs to be refreshed
 
 15.12.2018:
-Bestenliste mit Flask
-Neues Layout für Startseite
+Leaderboard using Flask
+New layout for starting page
 
 05.10.2018:
-V1.1
-Focus-Bug in den Einstellungen behoben
-Unterscheidung von Primary- und Secondarybuttons
+Fixed focus bug in settings
+Differentiation of primary and secondary buttons
 
 30.07.2018:
 V1
