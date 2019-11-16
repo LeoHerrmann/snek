@@ -89,7 +89,9 @@ var starter = {
 		display();
 
 		$(document).on("keydown touchstart", starter.start);
-		$(".popup").fadeOut(200);
+		setTimeout(function() {
+			$(".popup").fadeOut(200);
+		}, 200);
 	},
 
 	createGrid: function(size) {
@@ -124,20 +126,27 @@ var starter = {
 			}
 			else {
 				$("#gameOverScoreLabel").text("Score: " + score);
-				$("#startScreen").fadeIn(200);
+				setTimeout(function() {
+					$("#startScreen").fadeIn(200);
+				}, 200);
 				$("#startScreen h1").text("Game Over");
 				$("#startScreen #gameOverScoreLabel").css("display", "block");
 				clearInterval(moveInterval);
 
 
 				if (topten.length < 10) {
-					$("#enterLeaderboardScreen").fadeIn(200);
+					setTimeout(function() {
+						$("#enterLeaderboardScreen").fadeIn(200);
+					}, 200);
 					$("#scoreInput").val(score);
 				}
 				else {
 					for (var i=topten.length-1;i>-1;i--) {
 						if (score >= topten[i][1]) {
-							$("#enterLeaderboardScreen").fadeIn(200);
+							setTimeout(function() {
+								$("#enterLeaderboardScreen").fadeIn(200);
+							}, 200);
+
 							$("#scoreInput").val(score);
 							break;
 						}
@@ -315,10 +324,13 @@ function enterLeaderboard() {
 }
 
 function closeLeaderboardScreen() {
-	$("#enterLeaderboardScreen").fadeOut(200);
+	setTimeout(function() {
+		$("#enterLeaderboardScreen").fadeOut(200);
+	}, 200);
+
 	setTimeout(function() {
 		$("#statusIndicator").text("").css("display", "none");
-	}, 200);
+	}, 400);
 }
 
 

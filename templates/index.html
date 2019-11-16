@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 		<meta name="theme-color" content="#CCDDDD"/>
 		<meta name="description" content="Another variant of the popular snake game"/>
 		<link rel="apple-touch-icon" href="{{url_for('static', filename='icon.png')}}">
@@ -32,7 +32,7 @@
 				<div id="buttonContainer">
 					<button id="startButton" class="icon-play" onclick="starter.prepare();"></button>
 
-					<button class="secondary" onclick="$('#leaderboardScreen').fadeIn(200);refreshLeaderboardScreen();">
+					<button class="secondary" onclick="setTimeout(function() {$('#leaderboardScreen').fadeIn(200);}, 200);refreshLeaderboardScreen();">
 				Leaderboard</button>
 				</div>
 			</div>
@@ -48,7 +48,7 @@
 
 				<br/>
 
-				<button class="secondary" onclick="$('#leaderboardScreen').fadeOut(200);">Close</button>
+				<button class="secondary" onclick="setTimeout(function() {$('#leaderboardScreen').fadeOut(200);}, 200);">Close</button>
 			</div>
 		</div>
 
