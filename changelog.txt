@@ -1,6 +1,7 @@
 16.11.2019
 Added short delay between button clicks and action, so give button more time to finish their animations
 Default 300ms click delay removed
+README added
 
 13.11.2019:
 V2
