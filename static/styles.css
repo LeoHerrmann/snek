@@ -7,6 +7,7 @@
     --space-2: calc(var(--factor) * var(--space-1));
     --space-1: calc(var(--factor) * var(--space-0));
     --space-0: var(--base);
+    --space--1: calc(var(--space-0) / var(--factor));
 } 
 
 
@@ -22,7 +23,7 @@ html {
 	font-family:"PressStart2P", sans-serif;
 	touch-action:none;
 	background-color:#2c3e50;
-	font-size:4vmin;
+	font-size: var(--space-0);
 }
 
 
@@ -39,12 +40,14 @@ h2 {
 
 button {
 	outline:none;
-	border:0;
 	font-family:"PressStart2P", sans-serif;
-	font-size:4vmin;
+	font-size: var(--space--1);
+	text-transform: uppercase;
 	background-color:#cdd;
 	color:#2c3e50;
-	padding:2vmin 3vmin 2vmin 3vmin;
+	/*padding:2vmin 3vmin 2vmin 3vmin;*/
+	height: var(--space-3);
+	padding: 0 var(--space-0);
 	border: 1vmin solid #cdd;
 	transition: color 0.2s, background-color 0.2s;
 }
@@ -163,17 +166,6 @@ button.secondary:active {
 
 
 
-#settingsScreen input, #enterLeaderboardScreen input {
-	width:20vmin;
-	outline:none;
-	font-family:"PressStart2P", sans-serif;
-	font-size:4vmin;
-	background:transparent;
-	color:inherit;
-	border:0;
-}
-
-
 
 #leaderboardScreen > .content > * + * {
 	margin: var(--space-2) 0 0 0;
@@ -198,6 +190,14 @@ button.secondary:active {
 }
 #enterLeaderboardScreen input {
 	width:50vmin;
+	height: var(--space-3);
+	border: 0;
+	border-bottom: 1vmin solid #cdd;
+	outline:none;
+	font-family: inherit;
+	font-size: var(--space-0);
+	background:transparent;
+	color:inherit;
 }
 #statusIndicator {
 	display:none;

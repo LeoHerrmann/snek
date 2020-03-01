@@ -1,10 +1,15 @@
-16.11.2019
+01.03.2020:
+Small style and accessibility improvements on buttons and inputs
+
+
+16.11.2019:
 Added short delay between button clicks and action, so give button more time to finish their animations
 Default 300ms click delay removed
 README added
 
+
 13.11.2019:
-V2
+Version 2
 Layout and Design overhaul
 Translation to English
 Removed settings page
@@ -12,24 +17,28 @@ Web app manifest
 jQuery updated
 
 
-
 29.12.2018:
 Decreased sensibility of touch controls
 
+
 18.12.2018:
 Improved touch controls
+
 
 16.12.2018:
 Leaderboard table is created using javascript
 Ajax-Request to enter leaderboard instead of form -> Page no longer needs to be refreshed
 
+
 15.12.2018:
 Leaderboard using Flask
 New layout for starting page
 
+
 05.10.2018:
 Fixed focus bug in settings
 Differentiation of primary and secondary buttons
+
 
 30.07.2018:
 V1

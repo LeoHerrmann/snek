@@ -30,7 +30,7 @@
 				<p id="gameOverScoreLabel">Score: 123</p>
 
 				<div id="buttonContainer">
-					<button id="startButton" class="icon-play" onclick="starter.prepare();"></button>
+					<button id="startButton" class="icon-play" onclick="starter.prepare();" aria-label="Play"></button>
 
 					<button class="secondary" onclick="setTimeout(function() {$('#leaderboardScreen').fadeIn(200);}, 200);refreshLeaderboardScreen();">
 				Leaderboard</button>
@@ -61,7 +61,7 @@
 				<p>You belong to the ten best!</p>
 				<p>Enter your name to be included into the leaderboard.</p>
 
-				<label for="name">Name: </label>
+				<label for="nameInput">Name: </label>
 				<input id="nameInput" name="name" pattern="[A-Za-z0-9]+" maxlength="30" autocomplete="off" required/>
 
 				<p id="statusIndicator"></p>

@@ -43,18 +43,18 @@ window.onload = function() {
 				y: e.touches[0].clientY
 			}
 		}
-	
+
 		window.ontouchmove = function(e) {
 			var touchmovePosition = {
 				x: e.changedTouches[0].clientX,
 				y: e.changedTouches[0].clientY
 			};
-	
-	
+
+
 			var xDifference = touchstartPosition.x - touchmovePosition.x;
 			var yDifference = touchstartPosition.y - touchmovePosition.y;
 			var direction = "none";
-	
+
 			if (Math.abs(xDifference) > 50) {
 				if (xDifference < 0) {
 					movingDirection = "right";
