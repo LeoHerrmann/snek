@@ -3,14 +3,14 @@ self.addEventListener("install", (event) => {
         caches.open("v1").then((cache) => {
             return cache.addAll([
                 ".",
-                "/static/styles.css",
-                "/static/fontello/css/fontello.css",
-                "/static/jquery-3.4.1.min.js",
-                "/static/script.js",
-                "/static/PressStart2P.ttf",
-                "/static/fontello/font/fontello.woff2?84098909",
-                "/static/manifest.json",
-                "/static/icon_512.png"
+                "static/styles.css",
+                "static/fontello/css/fontello.css",
+                "static/jquery-3.4.1.min.js",
+                "static/script.js",
+                "static/PressStart2P.ttf",
+                "static/fontello/font/fontello.woff2?84098909",
+                "static/manifest.json",
+                "static/icon_512.png"
             ]);
         })
     );
