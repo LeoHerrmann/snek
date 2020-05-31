@@ -13,6 +13,12 @@ def index():
 
 
 
+@app.route("/service_worker.js")
+def serviceWorker():
+    return app.send_static_file("service_worker.js")
+
+
+
 @app.route("/topten")
 def topten():
         conn = sqlite3.connect(os.path.dirname(__file__) + "/leaderboard.db")
@@ -23,13 +29,13 @@ def topten():
 
         for i in range(len(rows)):
                 rows[i] = list(rows[i])
-        
+
         return str(rows).replace("\'", "\"")
 
 
 
 @app.route("/enterLeaderboard", methods=["POST"])
-def enterLeaderboard(): 
+def enterLeaderboard():
         data = json.loads(str(request.get_data(as_text=True)))
         name = data["name"]
         score = data["score"]
@@ -45,7 +51,7 @@ def enterLeaderboard():
 
         if int(score) != score:
                 valid = False
-        
+
         if valid:
                 conn = sqlite3.connect(os.path.dirname(__file__) + "/leaderboard.db")
                 cursor = conn.cursor()

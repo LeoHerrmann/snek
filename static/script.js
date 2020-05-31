@@ -10,13 +10,23 @@ var topten;
 var touchstartPosition;
 
 
+
 window.onload = function() {
+    registerServiceWorker();
 	refreshLeaderboardScreen();
 	addDirectionChangeEvents();
 
 	$("#settingsScreen input, #enterLeaderboardScreen input").on("click", function(e) {
 		e.target.focus();
 	});
+
+
+
+    function registerServiceWorker() {
+        if ("serviceWorker" in navigator) {
+        	navigator.serviceWorker.register("service_worker.js");
+        }
+    }
 
 
 	function addDirectionChangeEvents() {
@@ -42,7 +52,7 @@ window.onload = function() {
 				x: e.touches[0].clientX,
 				y: e.touches[0].clientY
 			}
-		}
+		};
 
 		window.ontouchmove = function(e) {
 			var touchmovePosition = {
@@ -71,7 +81,7 @@ window.onload = function() {
 					movingDirection = "up";
 				}
 			}
-		}
+		};
 	}
 }
 
@@ -132,7 +142,6 @@ var starter = {
 				$("#startScreen h1").text("Game Over");
 				$("#startScreen #gameOverScoreLabel").css("display", "block");
 				clearInterval(moveInterval);
-
 
 				if (topten.length < 10) {
 					setTimeout(function() {
@@ -204,7 +213,7 @@ function move(direction) {
 				grid[i].head = undefined;
 			}
 
-	
+
 			grid[i].disappearIn -= 1;
 
 			if (grid[i].disappearIn == 0) {
@@ -294,7 +303,15 @@ function enterLeaderboard() {
 		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 		xhttp.send(JSON.stringify(data));
 
-		closeLeaderboardScreen();
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status >= 200 && this.status < 300) {
+				closeLeaderboardScreen();
+			}
+
+			else if (this.readyState == 4 && this.status == 0) {
+				$("#statusIndicator").text("Error: No connection").css("display", "block");
+			}
+		};
 	}
 	else {
 		$("#statusIndicator").text(valid).css("display", "block");
@@ -339,6 +356,8 @@ function refreshLeaderboardScreen() {
 	var xhttp = new XMLHttpRequest();
 	xhttp.open("GET", window.location.href + "topten");
 	xhttp.send();
+
+
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
 			topten = JSON.parse(xhttp.responseText);
@@ -354,6 +373,10 @@ function refreshLeaderboardScreen() {
 				$(row).append(position, name, score);
 				$("#leaderboardScreen table").append(row);
 			}
+		}
+
+		else if (this.status == 0) {
+			$("#leaderboardScreen table").html("<p style='color: #d66;'>Error: No connection</p>");
 		}
 	};
 }

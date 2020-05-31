@@ -3,6 +3,7 @@
     "short_name": "Snek",
     "start_url": "../",
     "display": "standalone",
+    "orientation": "any",
     "theme_color": "#CCDDDD",
     "background_color": "#2c3e50",
     "description": "Another variant of the popular snake game",
