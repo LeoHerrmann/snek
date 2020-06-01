@@ -1,3 +1,7 @@
+01.06.2020:
+README updated
+
+
 31.05.2020:
 PWA conversion
 Use of relative URLs in service_worker
