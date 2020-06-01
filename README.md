@@ -1,4 +1,4 @@
-# Snek (Server Version)
+# Snek
 Another variant of the popular snake game featuring an online leaderboard as well as offline functionality
 
 Click [here](https://rahm.pythonanywhere.com/snek/) to try it out.
