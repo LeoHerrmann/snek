@@ -1,5 +1,5 @@
 # Snek
-Another variant of the popular snake game featuring an online leaderboard as well as offline functionality
+Another variant of the classic arcade game featuring an online leaderboard as well as offline functionality
 
 Click [here](https://rahm.pythonanywhere.com/snek/) to try it out.
 
