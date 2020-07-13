@@ -11,28 +11,30 @@ Click [here](https://rahm.pythonanywhere.com/snek/) to try it out.
 ## Getting Started
 Requirements: Python 3, pip, virtualenv 
 
-Clone this repository and navigate into the project
+To get this project running on your local machine, the following steps need to be performed:
+
+Clone this repository and navigate into the project:
 ```
 git clone https://github.com/Rahmsauce/Snek.git
 cd Snek
 ```
 
-Create a virtual environment and activate it
+Create a virtual environment and activate it:
 ```
 python3 -m venv env
 source env/bin/activate
 ```
 
-Install Flask
+Install Flask:
 ```
 pip install flask
 ```
 
-Export and run application.py
+Export and run application.py:
 ```
 export FLASK_APP=application.py
 export FLASK_ENV=development
 flask run
 ```
 
-Open http://localhost:5000 using a web browser
+Open http://localhost:5000 using a web browser.
