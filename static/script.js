@@ -354,9 +354,6 @@ function closeLeaderboardScreen() {
 
 function refreshLeaderboardScreen() {
 	var xhttp = new XMLHttpRequest();
-	xhttp.open("GET", window.location.href + "topten");
-	xhttp.send();
-
 
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
@@ -367,6 +364,7 @@ function refreshLeaderboardScreen() {
             if (topten.length == 0) {
                 $("#leaderboardScreen table").html("No entries yet");
             }
+
             else {
     			for (var i=0;i<topten.length;i++) {
 	    			var row = $("<tr></tr>");
@@ -384,4 +382,7 @@ function refreshLeaderboardScreen() {
 			$("#leaderboardScreen table").html("<p style='color: #d66;'>Error: No connection</p>");
 		}
 	};
+
+	xhttp.open("GET", window.location.href + "topten");
+	xhttp.send();
 }
