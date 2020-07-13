@@ -364,15 +364,20 @@ function refreshLeaderboardScreen() {
 
 			$("#leaderboardScreen table").html("");
 
-			for (var i=0;i<topten.length;i++) {
-				var row = $("<tr></tr>");
-				var position = $("<td>" + (i+1) + "</td>");
-				var name = $("<td>" + topten[i][0] + "</td>");
-				var score = $("<td>" + topten[i][1] + "</td>");
+            if (topten.length == 0) {
+                $("#leaderboardScreen table").html("No entries yet");
+            }
+            else {
+    			for (var i=0;i<topten.length;i++) {
+	    			var row = $("<tr></tr>");
+	    			var position = $("<td>" + (i+1) + "</td>");
+	    			var name = $("<td>" + topten[i][0] + "</td>");
+	    			var score = $("<td>" + topten[i][1] + "</td>");
 
-				$(row).append(position, name, score);
-				$("#leaderboardScreen table").append(row);
-			}
+	    			$(row).append(position, name, score);
+	    			$("#leaderboardScreen table").append(row);
+	    		}
+            }
 		}
 
 		else if (this.status == 0) {

@@ -1,5 +1,6 @@
 13.07.2020:
 Getting Started
+If there are no entries in the leaderboard, placeholder text is shown
 
 08.07.2020:
 README updated
