@@ -2,6 +2,7 @@
 Getting Started
 If there are no entries in the leaderboard, placeholder text is shown
 Removed venv from repository
+Script for removing all entries from the leaderboard
 
 08.07.2020:
 README updated
