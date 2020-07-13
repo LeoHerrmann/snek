@@ -9,8 +9,12 @@ Click [here](https://rahm.pythonanywhere.com/snek/) to try it out.
 
 
 ## Getting Started
-Requirements: Python 3, pip, virtualenv 
+### Requirements:
+- Python 3
+- pip
+- virtualenv 
 
+### Installation
 To get this project running on your local machine, the following steps need to be performed:
 
 Clone this repository and navigate into the project:
